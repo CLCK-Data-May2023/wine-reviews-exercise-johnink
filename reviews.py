@@ -7,4 +7,3 @@ reviews_country = reviews.groupby(['country']).points.agg([('reviews',len),('poi
 
 with open('data\\reviews-per-country.csv', 'w') as csv_file:
     reviews_country.to_csv(path_or_buf=csv_file)
-
